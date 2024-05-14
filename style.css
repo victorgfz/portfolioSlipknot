@@ -1,0 +1,503 @@
+/* resets */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    outline: none;
+    border: none;
+}
+
+/* general styles */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 20px;
+}
+
+.main {
+    background-color: #000;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.menu {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section {
+    background-color: #121212;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.container {
+    max-width: 1536px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+@media (max-width: 1536px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+/* buttons style */
+
+.button-1 {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgb(33, 33, 33, .5);
+    transition: .5s;
+}
+
+.button-1:hover {
+    background-color: rgb(60, 60, 60, .5);
+}
+
+.button-2 {
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #535353;
+    transition: .5s;
+}
+
+.button-2:hover {
+    background-color: #b3b3b3;
+}
+
+/* texts style */
+
+.text-l15 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.text-l20 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+.text-l25 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+
+}
+
+.text-sb15 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.text-sb20 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text-sb25 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.text-sb30 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text-sb50 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.text-b100 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+/* margins */
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+/* colors */
+
+.b3b3b3 {
+    color: #b3b3b3;
+}
+
+.eee {
+    color: #eee;
+}
+
+.fff {
+    color: #fff;
+}
+
+.spotify {
+    color: #1db954;
+}
+
+/* home specific */
+
+.home {
+    background: url("./assets/home_img.jpg") no-repeat center bottom;
+    background-size: cover;
+
+    position: relative;
+    z-index: 1;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(transparent, #000);
+}
+
+.home-items {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-icon {
+    height: 25px;
+}
+
+.home-group {
+    z-index: 2;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.home-group::before {
+    /* isso serve para poder posicionar as infos da home */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+/* about specific */
+.about {
+    position: relative;
+    background: linear-gradient(to bottom, #34071b, #121212);
+}
+
+.about-group {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.about-infos {
+    flex: 1;
+}
+
+.about-infos p {
+    max-width: 50ch;
+}
+
+.about-socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.about-socials li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-socials a {
+    transition: .5s;
+}
+
+.about-socials a:hover {
+    color: #fff;
+}
+
+.about-icon {
+    height: 25px;
+}
+
+.about-band {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.band-member {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 15px;
+    transition: .5s;
+}
+
+.band-member:hover {
+    background-color: rgb(83, 83, 83, .3);
+}
+
+.band-member img {
+    border-radius: 10px;
+}
+
+/* discography specific */
+
+.discography {
+    position: relative;
+}
+
+.discography-group {
+    padding: 60px 0;
+}
+
+.discography-albums {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+@media (max-width: 1536px) {
+    .discography-albums {
+        overflow-x: scroll;
+    }
+}
+
+
+.discography-album {
+    background-color: transparent;
+    padding: 20px;
+    transition: .5s;
+    border-radius: 10px;
+
+}
+
+.discography-album:hover {
+    background-color: #212121;
+}
+
+.discography-album img {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.discography-album div p:nth-child(1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+}
+
+.album-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.album-song {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.album-song p {
+    text-align: right;
+
+    min-width: 15px;
+}
+
+.album-song p:nth-child(2) {
+    flex: 1 1 auto;
+    text-align: left;
+
+}
+
+/* events specific */
+
+.events {
+    position: relative;
+}
+
+.events-group {
+    padding: 60px 0;
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.event-info {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.event-info:hover {
+    background-color: #1a1a1a;
+}
+
+.event-info div:nth-child(2),
+.event-info div:nth-child(3) {
+    flex: 1 1 0;
+}
+
+.event-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #212121;
+    padding: 10px 30px;
+}
+
+/* contact specific */
+
+.contact {
+    position: relative;
+
+}
+
+.contact-group {
+    padding: 60px 0;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-item {
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-item::placeholder {
+    color: #535353;
+}
+
+.contact-form textarea {
+    resize: none;
+    grid-column: 1/-1;
+    height: 150px;
+}
+
+.contact-form button {
+    grid-column: 1/-1;
+    place-self: center;
+}
